@@ -19,4 +19,4 @@ jobs:
 
     steps:
       - name: Lancement du script
-        run: echo "deploiement de l'application sur " ${{ inputs.environment }}# Syntaxe propre avec espace
+        run: echo "deploiement de l'application sur ${{ inputs.environment }}"
