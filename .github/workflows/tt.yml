@@ -23,3 +23,11 @@ jobs:
     needs: job_1
     steps:
       - run: echo "hello world ${{ github.job }}"
+  
+  job_4:
+    name: dernier job
+    runs-on: ubuntu-latest
+    needs: [job_2,job_3]
+
+    steps:
+        - run: echo "j'attends que job 2 et 3 se terminent"
