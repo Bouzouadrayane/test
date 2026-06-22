@@ -1,11 +1,7 @@
-name: test pipeline
+name: checking
 
 on:
   push:
-    branches:
-      - main
-    paths:
-      - "test.py" # Chemin relatif par rapport à la racine du dépôt Git !
 
 jobs:
   test_workflow:
