@@ -3,7 +3,7 @@ name: test pipeline
 on:
   push:
     branches:
-      - test
+      - main
     paths:
       - "test.py" # Chemin relatif par rapport à la racine du dépôt Git !
 
@@ -16,4 +16,5 @@ jobs:
         uses: actions/checkout@v7.0.0
           
       - name: affichage 
-        run: echo "hello world" # Syntaxe sur une seule ligne propre
+        run: echo "hello world"
+        if: ${{ github.event_name == 'push' && github.event.head_commit.message == 'BIG'}} # Syntaxe sur une seule ligne propre
