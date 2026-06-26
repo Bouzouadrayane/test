@@ -1,4 +1,4 @@
-name: pull test
+name: gemini ci cd
 
 on:
     pull_request:
