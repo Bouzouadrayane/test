@@ -1,19 +1,11 @@
-# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
-name: matrix
+name: nouvelle histoire
 
 on:
-  workflow_dispatch: # 💡 Ne pas oublier les ':' ici
+  push
 
 jobs:
-  job_1:
-    strategy:
-      fail-fast: false
-      max-parallel: 3
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        node_version: [14.x, 15.x]
-        
-    runs-on: ${{ matrix.os }} # 💡 Indenté au même niveau que 'strategy'
-
-    steps: # 💡 Indenté au même niveau que 'strategy' et 'runs-on'
-      - run: echo "cette version marche tres bien ${{ matrix.node_version }}"
+  job-1:
+    runs-on: ubuntu-latest
+    steps:
+     - name: hahah
+       run: echo "hello world"
