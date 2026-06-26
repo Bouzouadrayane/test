@@ -1,0 +1,11 @@
+name: nouvelle histoire
+
+on:
+  push
+
+jobs:
+  job-1:
+    runs-on: ubuntu-latest
+    steps:
+     - name: hahah
+       run: echo "hello world"
