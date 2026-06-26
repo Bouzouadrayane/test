@@ -1,4 +1,4 @@
-name: gemini ci cd
+name: gemini gmail
 
 on:
     pull_request:
