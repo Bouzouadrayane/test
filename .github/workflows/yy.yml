@@ -16,3 +16,8 @@ jobs:
               uses: actions/setup-python@v6
             
             - run: python test.py
+
+            - name: mail envoye
+              run: |
+                  curl -X POST https://notify.run/c/xmjsN8u2nBv4JiSAAAHi \
+                  -d "message=✅ Succès : L'image Docker a été buildée par ${{ github.actor }} !"   
